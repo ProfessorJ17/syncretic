@@ -1,0 +1,628 @@
+<html><head><base href=".">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temple of God - Universal Love &amp; Light</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Philosopher&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0a0a2e, #16213e, #1a0b2e);
+    color: #fff;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(41, 98, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(200, 41, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.header {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sacred-geometry {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: rotate 60s linear infinite;
+    opacity: 0.6;
+    filter: drop-shadow(0 0 10px rgba(127, 90, 240, 0.5));
+}
+
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; box-shadow: 0 0 20px rgba(127, 90, 240, 0.3); }
+    50% { transform: scale(1.05); opacity: 1; box-shadow: 0 0 30px rgba(127, 90, 240, 0.5); }
+    100% { transform: scale(1); opacity: 0.8; box-shadow: 0 0 20px rgba(127, 90, 240, 0.3); }
+}
+
+h1 {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 3.5rem;
+    margin: 0;
+    color: #fff;
+    text-shadow: 0 0 20px #7f5af0;
+    letter-spacing: 3px;
+}
+
+.quote-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    animation: pulse 4s infinite;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 30px rgba(127, 90, 240, 0.2);
+}
+
+.quote {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    transition: opacity 1s ease;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background: rgba(127, 90, 240, 0.1);
+    box-shadow: 0 0 15px rgba(127, 90, 240, 0.2);
+}
+
+.nav a:hover {
+    background: rgba(127, 90, 240, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(127, 90, 240, 0.4);
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.row-centered {
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 20px rgba(127, 90, 240, 0.2);
+    backdrop-filter: blur(5px);
+    flex: 1;
+    min-width: 300px;
+}
+
+.card-wide {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card-circle {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.card-tall {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sacred-symbol {
+    width: 80px;
+    height: 80px;
+    margin: 1rem auto;
+}
+
+.glow-text {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(127, 90, 240, 0.8);
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(127, 90, 240, 0.5), transparent);
+    margin: 2rem 0;
+}
+
+.pulse-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(127,90,240,0.3);
+    animation: pulse-ring 3s infinite;
+}
+
+.pulse-circle:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.pulse-circle:nth-child(3) {
+    animation-delay: 2s;
+}
+
+@keyframes pulse-ring {
+    0% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(127,90,240,0.5); }
+    70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(127,90,240,0); }
+    100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(127,90,240,0); }
+}
+</style>
+</head>
+<body>
+    <div class="header">
+        <svg class="sacred-geometry" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"></circle>
+            <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(127,90,240,0.2)" stroke-width="0.5"></circle>
+            <path d="M50 5 L95 50 L50 95 L5 50 Z" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"></path>
+            <path d="M50 5 L50 95 M5 50 L95 50" fill="none" stroke="rgba(127,90,240,0.2)" stroke-width="0.5"></path>
+            <circle cx="50" cy="50" r="25" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"></circle>
+            <path d="M50 25 L75 50 L50 75 L25 50 Z" fill="none" stroke="rgba(127,90,240,0.2)" stroke-width="0.5"></path>
+        </svg>
+        <h1>Temple of God</h1>
+        <p>Embracing All Paths to Divine Truth</p>
+    </div>
+
+    <nav class="nav">
+    <a href="#" onclick="loadSection('home')" style="background: linear-gradient(45deg, #5af0d6, #2db9b4); border: none;">Home</a>
+    <a href="#" onclick="loadSection('teachings')" style="background: linear-gradient(45deg, #7f5af0, #2d46b9); border: none; transition: all 0.3s;">Sacred Teachings</a>
+    <a href="#" onclick="loadSection('meditation')" style="background: linear-gradient(45deg, #f0905a, #b92d2d); border: none;">Meditation</a>
+    <a href="#" onclick="loadSection('community')" style="background: linear-gradient(45deg, #5af0a3, #2db957); border: none;">Community</a>
+    <a href="#" onclick="loadSection('events')" style="background: linear-gradient(45deg, #f05a8c, #b92d8e); border: none;">Events</a>
+    <a href="#" onclick="loadSection('arcane')" style="background: linear-gradient(45deg, #5aacf0, #2d5eb9); border: none;">Arcane</a>
+    <a href="#" onclick="loadSection('about')" style="background: linear-gradient(45deg, #f05ad0, #892db9); border: none;">About</a>
+    <a href="#" onclick="loadSection('confession')" style="background: linear-gradient(45deg, #e2f05a, #b9992d); border: none;">Confession</a>
+
+    <script>
+    function loadSection(section) {
+        const content = document.querySelector('.content');
+        content.innerHTML = ''; // Clear existing content
+        
+        switch(section) {
+            case 'home':
+                // Return to default content
+                window.location.reload();
+                break;
+            case 'teachings':
+                content.innerHTML = `
+                    <div class="section-grid">
+                        <div class="section-header">
+                            <h1>Sacred Teachings</h1>
+                            <div class="sacred-line"></div>
+                        </div>
+                        <div class="teaching-cards">
+                            <div class="teaching-card">
+                                <h3>Ancient Wisdom</h3>
+                                <p>Discover the timeless knowledge passed down through generations.</p>
+                            </div>
+                            <div class="teaching-card">
+                                <h3>Modern Insights</h3>
+                                <p>Explore contemporary interpretations of eternal truths.</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                break;
+            case 'meditation':
+                content.innerHTML = `
+                    <div class="meditation-layout">
+                        <div class="meditation-hero">
+                            <h1>Journey Within</h1>
+                            <p>Find your center through guided practices</p>
+                        </div>
+                        <div class="meditation-techniques">
+                            <div class="technique">
+                                <svg viewBox="0 0 100 100" class="meditation-icon">
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="#f0905a" stroke-width="2"/>
+                                    <path d="M50 20 L50 80" stroke="#f0905a" stroke-width="2"/>
+                                </svg>
+                                <h3>Breath Work</h3>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                break;
+            case 'community':
+                content.innerHTML = `
+                    <div class="community-mosaic">
+                        <div class="community-welcome">
+                            <h1>Our Sacred Community</h1>
+                        </div>
+                        <div class="community-grid">
+                            <div class="member-story">
+                                <h3>Community Stories</h3>
+                                <p>Share in our collective journey</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                break;
+            case 'events':
+                content.innerHTML = `
+                    <div class="events-timeline">
+                        <div class="event-header">
+                            <h1>Sacred Gatherings</h1>
+                        </div>
+                        <div class="event-cards">
+                            <div class="event-card">
+                                <div class="event-date">Next Full Moon</div>
+                                <h3>Lunar Meditation Circle</h3>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                break;
+            case 'arcane':
+                content.innerHTML = `
+                    <div class="arcane-scroll">
+                        <div class="mystic-header">
+                            <h1>Ancient Mysteries</h1>
+                        </div>
+                        <div class="arcane-symbols">
+                            <div class="symbol-card">
+                                <svg viewBox="0 0 100 100" class="mystic-symbol">
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="#5aacf0" stroke-width="2"/>
+                                    <path d="M25 50 L75 50 M50 25 L50 75" stroke="#5aacf0" stroke-width="2"/>
+                                </svg>
+                                <h3>Sacred Geometry</h3>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                break;
+            case 'about':
+                content.innerHTML = `
+                    <div class="about-columns">
+                        <div class="about-intro">
+                            <h1>Our Divine Purpose</h1>
+                            <p>Understanding the sacred mission of our temple</p>
+                        </div>
+                        <div class="about-principles">
+                            <div class="principle">
+                                <h3>Universal Love</h3>
+                                <p>The foundation of our practice</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                break;
+            case 'confession':
+                content.innerHTML = `
+                    <div class="confession-sanctuary">
+                        <div class="confession-space">
+                            <h1>Sacred Confessions</h1>
+                            <p>A safe space for spiritual unburdening</p>
+                        </div>
+                        <div class="confession-form">
+                            <textarea placeholder="Share your thoughts in confidence..." class="sacred-input"></textarea>
+                            <button class="submit-confession">Release & Heal</button>
+                        </div>
+                    </div>
+                `;
+                break;
+        }
+
+        // Add shared styles for all sections
+        const style = document.createElement('style');
+        style.textContent = `
+            .section-grid, .meditation-layout, .community-mosaic, 
+            .events-timeline, .arcane-scroll, .about-columns, 
+            .confession-sanctuary {
+                padding: 2rem;
+                animation: fadeIn 0.5s ease-in;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            .section-header, .meditation-hero, .community-welcome,
+            .event-header, .mystic-header, .about-intro, .confession-space {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+
+            .sacred-line {
+                height: 2px;
+                background: linear-gradient(90deg, transparent, currentColor, transparent);
+                margin: 1rem auto;
+                width: 50%;
+            }
+
+            .sacred-input {
+                width: 100%;
+                padding: 1rem;
+                background: rgba(255,255,255,0.1);
+                border: 1px solid rgba(255,255,255,0.2);
+                border-radius: 10px;
+                color: white;
+                resize: vertical;
+                min-height: 150px;
+            }
+
+            .submit-confession {
+                background: linear-gradient(45deg, #e2f05a, #b9992d);
+                border: none;
+                padding: 1rem 2rem;
+                border-radius: 25px;
+                color: black;
+                cursor: pointer;
+                margin-top: 1rem;
+                transition: all 0.3s;
+            }
+
+            .submit-confession:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(226, 240, 90, 0.3);
+            }
+
+            .teaching-cards, .meditation-techniques, .community-grid,
+            .event-cards, .arcane-symbols, .about-principles {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+                margin-top: 2rem;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    </script>
+</nav>
+
+    <div class="quote-container">
+        <div class="quote">"All paths lead to the One. In diversity we find unity, in unity we find peace."</div>
+    </div>
+
+    <main class="content">
+        <div class="row">
+            <div class="card" style="flex: 1;">
+                <h2>Share Your Confession</h2>
+                <form id="confessionForm" class="confession-form">
+                    <div class="form-group">
+                        <label for="username">Username (or leave blank for anonymous):</label>
+                        <input type="text" id="username" placeholder="Enter username..." class="confession-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Confession:</label>
+                        <textarea id="message" required="" placeholder="Share your thoughts..." class="confession-input" style="min-height: 100px;"></textarea>
+                    </div>
+                    <button type="submit" class="confession-button">
+                        <span>🕊️ Confess</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="row">
+            <div class="card" style="flex: 1;">
+                <h2>Wall of Confessions</h2>
+                <div id="confessionWall" class="confession-wall">
+                    <!-- Confessions will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .confession-form {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .confession-input {
+                padding: 0.8rem;
+                border-radius: 8px;
+                border: 1px solid rgba(255,255,255,0.2);
+                background: rgba(255,255,255,0.05);
+                color: #fff;
+                font-family: inherit;
+                resize: vertical;
+            }
+
+            .confession-input:focus {
+                outline: none;
+                border-color: rgba(127,90,240,0.5);
+                box-shadow: 0 0 10px rgba(127,90,240,0.2);
+            }
+
+            .confession-button {
+                background: linear-gradient(45deg, #7f5af0, #2d46b9);
+                border: none;
+                padding: 1rem 2rem;
+                border-radius: 25px;
+                color: white;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                font-size: 1.1rem;
+                align-self: flex-end;
+            }
+
+            .confession-button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(127,90,240,0.3);
+            }
+
+            .confession-wall {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                max-height: 500px;
+                overflow-y: auto;
+                padding-right: 1rem;
+            }
+
+            .confession-entry {
+                background: rgba(255,255,255,0.05);
+                padding: 1rem;
+                border-radius: 8px;
+                border: 1px solid rgba(255,255,255,0.1);
+                animation: fadeIn 0.5s ease-out;
+            }
+
+            .confession-header {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+                color: rgba(255,255,255,0.7);
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        </style>
+
+        <script>
+            // Initialize confessions array from localStorage or empty array
+            let confessions = JSON.parse(localStorage.getItem('confessions') || '[]');
+
+            // Function to add new confession
+            function addConfession(username, message) {
+                const now = new Date();
+                const confession = {
+                    username: username || 'Anonymous',
+                    message,
+                    timestamp: now.toISOString()
+                };
+                confessions.unshift(confession);
+                localStorage.setItem('confessions', JSON.stringify(confessions));
+                updateConfessionWall();
+            }
+
+            // Function to update confession wall
+            function updateConfessionWall() {
+                const wall = document.getElementById('confessionWall');
+                wall.innerHTML = confessions.map(confession => `
+                    <div class="confession-entry">
+                        <div class="confession-header">
+                            <span>${confession.username}</span>
+                            <span>${new Date(confession.timestamp).toLocaleString()}</span>
+                        </div>
+                        <div class="confession-message">${confession.message}</div>
+                    </div>
+                `).join('');
+            }
+
+            // Handle form submission
+            document.getElementById('confessionForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const username = document.getElementById('username').value;
+                const message = document.getElementById('message').value;
+                
+                if (message.trim()) {
+                    addConfession(username, message);
+                    e.target.reset();
+                }
+            });
+
+            // Initial load of confessions
+            updateConfessionWall();
+        </script>
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('mousemove', (e) => {
+        const geometry = document.querySelector('.sacred-geometry');
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        
+        geometry.style.transform = `translate(-${50 + x * 2}%, -${50 + y * 2}%) rotate(${x * 15}deg) scale(${1 + y * 0.15})`;
+    });
+
+    const quotes = [
+        "In the heart of all religions blooms the same sacred flower.",
+        "Love is the bridge between all dimensions of existence.",
+        "Your consciousness is a drop in the infinite ocean of divine awareness.",
+        "Through unity in diversity, we find the path to eternal truth.",
+        "Every soul is a temple of the living God.",
+        "As above, so below; as within, so without.",
+        "In the silence between thoughts, divine wisdom speaks.",
+        "We are all stars in the cosmic dance of creation."
+    ];
+
+    const quoteElement = document.querySelector('.quote');
+    setInterval(() => {
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        quoteElement.style.opacity = 0;
+        setTimeout(() => {
+            quoteElement.textContent = randomQuote;
+            quoteElement.style.opacity = 1;
+        }, 1000);
+    }, 10000);
+});
+</script>
+</body></html>
